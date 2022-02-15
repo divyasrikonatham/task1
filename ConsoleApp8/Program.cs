@@ -27,15 +27,11 @@ namespace ConsoleApp8
         {
 
             str = str + " ";
-
-            // to store each word
             string word = "";
             int count = 0;
             for (int i = 0; i < str.Length; i++)
             {
                 char ch = str[i];
-
-                // extracting each word
                 if (ch != ' ')
                 {
                     word = word + ch;
@@ -55,7 +51,7 @@ namespace ConsoleApp8
         static void Main(string[] args)
         {
             
-            Console.WriteLine("Please enter 500 words description ");
+            Console.WriteLine("Please enter atleast 500 words description ");
             string str = Console.ReadLine();
             Regex regex = new Regex("[!@#$%^&*]");
             bool hasSpecialChars = regex.IsMatch(str);
